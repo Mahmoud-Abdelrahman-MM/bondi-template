@@ -1,0 +1,205 @@
+/* Start Global Rules */
+body {
+  font-family: "Roboto", sans-serif;
+}
+::selection {
+  background-color: var(--yellow-color);
+}
+/* End Global Rules */
+
+/* Start Variables */
+:root {
+  --dark-color: #19283f;
+  --gray-color: #eff7fa;
+  --white-color: #fff;
+  --cyan-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --main-duration: 0.3s;
+}
+/* End Variables */
+
+/* Start Main Components */
+.bg-dark {
+  background-color: var(--dark-color) !important;
+}
+.c-cyan {
+  background-color: var(--cyan-color) !important;
+}
+.c-yellow {
+  background-color: var(--yellow-color) !important;
+}
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+.section-header::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background-color: var(--cyan-color);
+}
+/* End Main Components */
+
+/* Start Navbar */
+.navbar .navbar-toggler {
+  color: var(--white-color);
+  border-color: var(--white-color);
+  transition: var(--main-duration);
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"],
+.navbar .navbar-toggler:hover {
+  color: var(--cyan-color);
+  border-color: var(--cyan-color);
+}
+.navbar .navbar-nav .nav-link {
+  color: var(--white-color);
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--cyan-color) !important;
+}
+.navbar .search {
+  color: var(--cyan-color);
+  border-left: 1px solid var(--cyan-color);
+  cursor: pointer;
+}
+.navbar .search svg {
+  color: var(--cyan-color);
+}
+/* End Navbar */
+
+/* Start Landing */
+.landing {
+  min-height: calc(100vh - 72px);
+}
+/* End Landing */
+
+/* Start Features */
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem !important;
+  color: var(--gray-color);
+}
+.features .icon-holder .icon {
+  color: var(--cyan-color);
+}
+.features h4 {
+  color: var(--yellow-color);
+}
+.features p {
+  margin-bottom: 1rem;
+}
+/* End Features */
+
+/* Start Our Work */
+.our-work {
+  background-color: var(--gray-color);
+}
+.our-work li a:hover {
+  color: var(--red-color);
+}
+.our-work .work-holder .box {
+  padding: 5px;
+  position: relative;
+}
+.our-work .work-holder .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgba(51, 209, 204, 0.76);
+  width: 0;
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  transition: var(--main-duration);
+  opacity: 0;
+}
+.our-work .work-holder .box:hover::before {
+  width: calc(100% - 10px);
+  opacity: 1;
+}
+/* End Our Work */
+
+/* Start Stuff */
+.stuff .description {
+  max-width: 500px;
+}
+/* End Stuff */
+
+/* Start Team */
+.team {
+  background-color: var(--gray-color);
+}
+.team .title {
+  color: var(--yellow-color);
+}
+.team img {
+  width: 100%;
+}
+.team h4 {
+  background-color: var(--cyan-color);
+}
+/* End Team */
+
+/* Start Subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid var(--white-color);
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe input[type="text"]::placeholder {
+  color: var(--white-color);
+}
+.subscribe input[type="submit"] {
+  color: var(--yellow-color);
+}
+/* End Subscribe */
+
+/* Start Footer */
+footer .creator {
+  color: var(--cyan-color);
+}
+footer .corporation {
+  color: var(--yellow-color);
+}
+footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+.footer .facebook {
+  background-color: #1877f2;
+}
+.footer .twitter {
+  background-color: #1da1f2;
+}
+.footer .linkedin {
+  background-color: #0077b5;
+}
+.footer .youtube {
+  background-color: #ff0000;
+}
+/* End Footer */
